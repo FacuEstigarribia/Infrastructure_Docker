@@ -12,5 +12,7 @@ RUN apt-get update && \
     apt-get install -y maven && \
     rm -rf /var/lib/apt/lists/*
 
+ENV MY_ENV=api
+
 # Run the tests using Maven
 CMD ["mvn", "clean", "test"]
